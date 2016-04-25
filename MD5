@@ -1,0 +1,12 @@
+d4aabba93cffce568e7216b23cde549a *DESCRIPTION
+383c8f6d334c506f0183c7c7286d7823 *NAMESPACE
+d7ffffe553d97c9ac18abb7f60c54d38 *NEWS
+9a5c1ab1fe31070a28a637af4b9ed5b4 *R/sigmoid.R
+462e200b2d44c925915a9366902914d4 *README.md
+38c372ff39a97fbf6f46c6e2e77aafd9 *man/Gompertz.Rd
+4b3d7e7ae1ba9f197164ff245c94fcdf *man/SoftMax.Rd
+13ee2df1635ecacf7050529de5222e80 *man/inverse_Gompertz.Rd
+94bb120b722fab8bc384a75dd06898f0 *man/logistic.Rd
+b7ea5ca22aa7f786118526450b7af2eb *man/logit.Rd
+69996f127380835847215002d012d7ce *man/sigmoid.Rd
+c156b578160088f56ab0aecffcb4a080 *man/sigmoid_output_to_derivative.Rd
