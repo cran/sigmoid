@@ -1,8 +1,12 @@
-d4aabba93cffce568e7216b23cde549a *DESCRIPTION
-383c8f6d334c506f0183c7c7286d7823 *NAMESPACE
-d7ffffe553d97c9ac18abb7f60c54d38 *NEWS
-9a5c1ab1fe31070a28a637af4b9ed5b4 *R/sigmoid.R
-462e200b2d44c925915a9366902914d4 *README.md
+b7a388fcc26414bd34ff75f0e15cf0d4 *DESCRIPTION
+fd1f9427b3afc9703f1659fbfd8568ae *NAMESPACE
+6a8452613140f83bf10a23bd54225af0 *NEWS
+a3cb7fe506f4f6f8f34a6dfffc66ccbd *R/sigmoid.R
+cd19b509b2f2060c1bc4bbfa11ea2fcb *README.md
+9bacfdeff6364823c8d1a7381eda7459 *build/vignette.rds
+6b6b1b6ca63dcb1c436959128d421721 *inst/doc/sigmoid.R
+8b9ce0a7d10e7dd5336fcee64852bdfd *inst/doc/sigmoid.Rmd
+a1fe595efd5ad92dc5a2cd2de831355a *inst/doc/sigmoid.html
 38c372ff39a97fbf6f46c6e2e77aafd9 *man/Gompertz.Rd
 4b3d7e7ae1ba9f197164ff245c94fcdf *man/SoftMax.Rd
 13ee2df1635ecacf7050529de5222e80 *man/inverse_Gompertz.Rd
@@ -10,3 +14,7 @@ d7ffffe553d97c9ac18abb7f60c54d38 *NEWS
 b7ea5ca22aa7f786118526450b7af2eb *man/logit.Rd
 69996f127380835847215002d012d7ce *man/sigmoid.Rd
 c156b578160088f56ab0aecffcb4a080 *man/sigmoid_output_to_derivative.Rd
+c35f47ff2960dd7b7fab2661bdfe472e *man/tanh_output_to_derivative.Rd
+2184771b28aaa6dac88ce4f4e0570958 *tests/testthat.R
+55bfd9dbaeb7c3b39a855612a20904e3 *tests/testthat/test_sigmoid.R
+8b9ce0a7d10e7dd5336fcee64852bdfd *vignettes/sigmoid.Rmd
