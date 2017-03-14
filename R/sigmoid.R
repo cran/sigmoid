@@ -76,6 +76,30 @@ Gompertz <- function(x, a=1, b=1, c=1)
 logit <- function(x)
   log( x / (1-x) )
 
+#' @name relu
+#' @title Rectified Linear Unit
+#' @param x input vector
+#' @description maps numeric vector using ReLU function
+#' @export
+relu <- function(x)
+  ifelse(x >= 0, x, 0)
+
+#' @name leakly_relu
+#' @title Leaky Rectified Linear Unit
+#' @param x input vector
+#' @description maps numeric vector using leaky ReLU function
+#' @export
+relu_leaky <- function(x)
+  ifelse(x >= 0, x, 0.01*x)
+
+#' @name SoftPlus
+#' @title SoftPlus
+#' @param x input vector
+#' @description maps numeric input vector using SoftPlus function
+#' @export
+softplus <- function(x)
+  log(1  + exp(x))
+
 #' @name inverse_Gompertz
 #' @title Inverse Gompertz
 #' @param x input vector Gompertz values
@@ -110,3 +134,18 @@ sigmoid_output_to_derivative <- function(x)
 #' @param x vector of tanh values
 tanh_output_to_derivative <- function(x)
   1-x^2
+
+#' @name relu_output_to_derivative
+#' @title ReLU Derivative
+#' @description Converts output of ReLU function to its derivative.
+#' @param x vector or ReLU values
+relu_output_to_derivative <- function(x)
+  ifelse(x > 0, 1, 0)
+
+#' @name softplus_output_to_derivative
+#' @title SoftPlus Derivative
+#' @description Convert output of SoftPlus function to its derivative.
+#' @param x vector of SoftPlus values
+#' @export
+softplus_output_to_derivative <- function(x)
+  1/(1+exp(-x))
