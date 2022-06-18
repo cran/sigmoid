@@ -1,38 +1,45 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-sigmoid
-=======
-[![License](http://img.shields.io/badge/license-GPLv3-brightgreen.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
-[![CRAN Version](http://www.r-pkg.org/badges/version/sigmoid)](https://cran.r-project.org/package=sigmoid)
-[![Total RStudio Cloud Downloads](http://cranlogs.r-pkg.org/badges/grand-total/sigmoid?color=brightgreen)](https://cran.r-project.org/package=sigmoid)
-[![RStudio Cloud Downloads](http://cranlogs.r-pkg.org/badges/sigmoid?color=brightgreen)](https://cran.r-project.org/package=sigmoid)
-[![Travis-CI Build Status](https://travis-ci.org/bquast/sigmoid.svg?branch=master)](https://travis-ci.org/bquast/sigmoid)
-[![Coverage Status](https://img.shields.io/coveralls/bquast/sigmoid.svg)](https://coveralls.io/r/bquast/sigmoid?branch=master)
 
-Several different sigmoid functions are implemented, including a wrapper function, SoftMax preprocessing and inverse functions.
+# sigmoid
 
-Installation
-------------
+[![License](https://img.shields.io/badge/license-GPLv3-brightgreen.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+[![CRAN Version](https://www.r-pkg.org/badges/version/sigmoid)](https://cran.r-project.org/package=sigmoid)
+[![R build status](https://github.com/bquast/sigmoid/workflows/R-CMD-check/badge.svg)](https://github.com/bquast/sigmoid/actions?workflow=R-CMD-check)
+[![Coverage Status](https://img.shields.io/codecov/c/github/bquast/sigmoid/master.svg)](https://app.codecov.io/gh/bquast/sigmoid?branch=master)
+[![Total RStudio Cloud Downloads](https://cranlogs.r-pkg.org/badges/grand-total/sigmoid?color=brightgreen)](https://cran.r-project.org/package=sigmoid)
+[![RStudio Cloud Downloads](https://cranlogs.r-pkg.org/badges/sigmoid?color=brightgreen)](https://cran.r-project.org/package=sigmoid)
 
-The **stable** version can be installed from [CRAN](https://cran.r-project.org/package=sigmoid) using:
+Several different sigmoid functions are implemented, including a wrapper
+function, SoftMax preprocessing and inverse functions.
+
+## Demonstration
+![sigmoid demonstration](https://github.com/bquast/R-demo-GIFs/blob/master/sigmoid.gif)
+
+## Installation
+
+The **stable** version can be installed from
+[CRAN](https://cran.r-project.org/package=sigmoid) using:
 
 ``` r
 install.packages('sigmoid')
 ```
 
-The **development** version, to be used **at your peril**, can be installed from [GitHub](http://github.com/bquast/sigmoid) using the `devtools` package.
+The **development** version, to be used **at your peril**, can be
+installed from [GitHub](https://github.com/bquast/sigmoid) using the
+`remotes` package.
 
 ``` r
-if (!require('devtools')) install.packages('devtools')
-devtools::install_github('bquast/sigmoid')
+if (!require('remotes')) install.packages('remotes')
+remotes::install_github('bquast/sigmoid')
 ```
 
-Usage
------
+## Usage
 
 Following installation, the package can be loaded using:
 
-The `sigmoid()` function returns the sigmoid value of the input(s), by default this is done using the **standard logistic function**.
+The `sigmoid()` function returns the sigmoid value of the input(s), by
+default this is done using the **standard logistic function**.
 
 ``` r
 library(sigmoid)
@@ -44,9 +51,8 @@ Inputs can also be tensors, such as vectors, matrices, or arrays.
 
 ``` r
 sigmoid(-5:5)
-#>  [1] 0.006692851 0.017986210 0.047425873 0.119202922 0.268941421
-#>  [6] 0.500000000 0.731058579 0.880797078 0.952574127 0.982013790
-#> [11] 0.993307149
+#>  [1] 0.006692851 0.017986210 0.047425873 0.119202922 0.268941421 0.500000000
+#>  [7] 0.731058579 0.880797078 0.952574127 0.982013790 0.993307149
 sigmoid( matrix(-3:5,nrow=3) ) # etc.
 #>            [,1]      [,2]      [,3]
 #> [1,] 0.04742587 0.5000000 0.9525741
@@ -54,7 +60,8 @@ sigmoid( matrix(-3:5,nrow=3) ) # etc.
 #> [3,] 0.26894142 0.8807971 0.9933071
 ```
 
-The `sigmoid()` function is a wrapper, which by default uses the `logistic()` function, it can also use other methods.
+The `sigmoid()` function is a wrapper, which by default uses the
+`logistic()` function, it can also use other methods.
 
 ``` r
 sigmoid( -5:5, method='Gompertz' )
@@ -85,21 +92,21 @@ ggplot(df, aes(input, logistic(input))) + geom_line() +
   geom_line(aes(input,Gompertz(input)), colour='red')
 ```
 
-![](tools/sigmoid-shape-1.png)
+![](tools/sigmoid-shape-1.png)<!-- -->
 
 For inverses, additional parameters, SoftMax, etc. see the vignette.
 
     vignette('sigmoid')
 
-For general information on using the package, please refer to the help files.
+For general information on using the package, please refer to the help
+files.
 
 ``` r
 help('sigmoid')
 help(package='sigmoid')
 ```
 
-Additional Information
-----------------------
+## Additional Information
 
 An overview of the changes is available in the NEWS file.
 
@@ -107,16 +114,16 @@ An overview of the changes is available in the NEWS file.
 news(package='sigmoid')
 ```
 
-There is a dedicated website with information hosted on my [personal website](http://qua.st/).
+There is a dedicated website with information hosted on my [personal
+website](https://qua.st/).
 
-<http://qua.st/sigmoid>
+<https://qua.st/sigmoid>
 
-Development
------------
+## Development
 
 Development takes place on the GitHub page.
 
-<http://github.com/bquast/sigmoid>
+<https://github.com/bquast/sigmoid>
 
 Bugs can be filed on the issues page on GitHub.
 
